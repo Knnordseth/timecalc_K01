@@ -11,13 +11,21 @@ button{
 #inputcontainer{
     background-color: lightgray;
     background-color: gray;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
 
 }
 
 .inputs{
     display: flex;
     justify-content: center;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+table{
+    color: white;
 }
 
 input{
@@ -40,5 +48,6 @@ body{
     justify-content: center;
     text-align: center;
     font-size: 24;
+    margin-top: 20px;
 }
 

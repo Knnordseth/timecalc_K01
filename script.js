@@ -25,12 +25,23 @@ calcBtn.onclick = () => {
     }
 
     const hours = Math.floor(totalTimeSeconds / 3600);
+    const totalHours = parseFloat((totalTimeSeconds / 3600).toFixed(3));
+    const totalMinutes = parseFloat((totalTimeSeconds /60).toFixed(3));
+    const totalSeconds = totalTimeSeconds
     totalTimeSeconds %= 3600;
+
     const minutes = Math.floor(totalTimeSeconds / 60);
     const seconds = totalTimeSeconds % 60;
+    
+    
 
     utskriftEl.innerHTML = "";
-    utskriftEl.innerHTML = (`Total time: ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds.`);
+    utskriftEl.innerHTML += (
+        `Total time: ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds.<br><br>
+        Total hours: ${totalHours}<br><br>
+        Total minutes: ${totalMinutes}<br><br>
+        Total seconds: ${totalSeconds}
+    `);
 
 
 };

@@ -9,21 +9,42 @@
 <body>
     <div id="inputcontainer">
         <div class="inputs">
-            <label for="hourStart">Start Time:</label>
-            <input type="number" id="hourStart" min="0" max="23" placeholder="HH">
-            <input type="number" id="minStart" min="0" max="59" placeholder="MM">
-            <input type="number" id="secStart" min="0" max="59" placeholder="SS">
+            <table>
+                <td>
+                    <label for="hourStart">Start Time:</label>
+                </td>
+                <td>  
+                    <input type="number" id="hourStart" min="0" max="23" placeholder="HH">
+                </td> 
+                <td>   
+                    <input type="number" id="minStart" min="0" max="59" placeholder="MM">
+                </td>  
+                <td>
+                    <input type="number" id="secStart" min="0" max="59" placeholder="SS">
+                </td>
+            </table>
         </div>
         <div class="inputs">
-            <label for="hourEnd">End Time:</label>
-            <input type="number" id="hourEnd" min="0" max="23" placeholder="HH">
-            <input type="number" id="minEnd" min="0" max="59" placeholder="MM">
-            <input type="number" id="secEnd" min="0" max="59" placeholder="SS">
+            <table>
+                <td>
+                    <label for="hourEnd">End Time:</label>
+                </td>
+                <td>
+                    <input type="number" id="hourEnd" min="0" max="23" placeholder="HH">
+                </td>
+                <td>
+                    <input type="number" id="minEnd" min="0" max="59" placeholder="MM">
+                </td>
+                <td>
+                    <input type="number" id="secEnd" min="0" max="59" placeholder="SS">
+                </td>
+            </table>
         </div>
 
+    </div class>
+    <div class="inputs">
+        <button id="calculate">Calculate</button>
     </div>
-    <button id="calculate">Calculate</button>
-
     <div id="utskrift">
 
     </div>
