@@ -4,22 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div>
-            <input type="number" id="hourStart">
-            <input type="number" id="minStart">
-            <input type="number" id="secStart">
+    <div id="inputcontainer">
+        <div class="inputs">
+            <label for="hourStart">Start Time:</label>
+            <input type="number" id="hourStart" min="0" max="23" placeholder="HH">
+            <input type="number" id="minStart" min="0" max="59" placeholder="MM">
+            <input type="number" id="secStart" min="0" max="59" placeholder="SS">
         </div>
-        <div>
-            <input type="number" id="hourEnd">
-            <input type="number" id="minEnd">
-            <input type="number" id="secEnd">
+        <div class="inputs">
+            <label for="hourEnd">End Time:</label>
+            <input type="number" id="hourEnd" min="0" max="23" placeholder="HH">
+            <input type="number" id="minEnd" min="0" max="59" placeholder="MM">
+            <input type="number" id="secEnd" min="0" max="59" placeholder="SS">
         </div>
 
-        <button id="calculate">Calculate</button>
     </div>
+    <button id="calculate">Calculate</button>
 
     <div id="utskrift">
 
