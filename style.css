@@ -16,6 +16,8 @@ button{
 
 }
 
+
+
 .inputs{
     display: flex;
     justify-content: center;
@@ -26,6 +28,12 @@ button{
 
 table{
     color: white;
+    text-align: center;
+}
+
+td{
+    height: 40px;
+    width: 110px;
 }
 
 input{
