@@ -1,3 +1,4 @@
+// math functions
 const hourStartInp = document.querySelector("#hourStart")
 const minStartInp = document.querySelector("#minStart")
 const secStartInp = document.querySelector("#secStart")
@@ -5,8 +6,39 @@ const hourEndInp = document.querySelector("#hourEnd")
 const minEndInp = document.querySelector("#minEnd")
 const secEndInp = document.querySelector("#secEnd")
 const calcBtn = document.querySelector("#calculate")
-
 const utskriftEl = document.querySelector("#utskrift")
+
+function saveData() {
+    const data = {
+        hourStart: hourStartInp.value,
+        minStart: minStartInp.value,
+        secStart: secStartInp.value,
+        hourEnd: hourEndInp.value,
+        minEnd: minEndInp.value,
+        secEnd: secEndInp.value,
+        utskrift: utskriftEl.innerHTML
+    };
+
+    chrome.storage.sync.set({ data }, () => {
+        console.log('data savevd:', data );
+    });
+}
+
+function loadData() {
+    chrome.storage.sync.get(['data'], (result) => {
+      if (result.data) {
+        hourStartInp.value = result.data.hourStart;
+        minStartInp.value = result.data.minStart;
+        secStartInp.value = result.data.secStart;
+        hourEndInp.value = result.data.hourEnd;
+        minEndInp.value = result.data.minEnd;
+        secEndInp.value = result.data.secEnd;
+        utskriftEl.innerHTML = result.data.utskrift;
+      }
+    });
+  }
+   
+  loadData();
 
 
 calcBtn.onclick = () => {
@@ -32,18 +64,15 @@ calcBtn.onclick = () => {
 
     const minutes = Math.floor(totalTimeSeconds / 60);
     const seconds = totalTimeSeconds % 60;
-    
-    
 
-    utskriftEl.innerHTML = "";
-    utskriftEl.innerHTML += (
+    //local storage logic
+    utskriftEl.innerHTML = (
         `Total time: ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds.<br><br>
         Total hours: ${totalHours}<br><br>
         Total minutes: ${totalMinutes}<br><br>
-        Total seconds: ${totalSeconds}
-    `);
+        Total seconds: ${totalSeconds}`
+    );
 
-
+// Save the data after calculation
+saveData();
 };
-
-
