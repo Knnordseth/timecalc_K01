@@ -1,10 +1,5 @@
 # Time Calculator Extension
 
-Welcome to the Time Calculator Chrome Extension! 
-This handy tool allows you to quickly and easily find the amount of time between two inputs directly from your Chrome browser. 
-Whether you're scheduling meetings, tracking project durations, or managing your time effectively, this extension simplifies 
-the process of calculating time differences.
-
 ## Features:
 
 1. **Simple Interface:** The Time Calculator Chrome Extension provides a user-friendly 
@@ -25,3 +20,11 @@ To start using the Time Calculator Chrome Extension, follow these simple steps:
 3. **Input Timestamps:** Enter your two timestamps in the designated input fields within the extension popup.
 
 4. **Calculate:** Click the calculate button. After the calculate button i pressed, the extension will calculate the time difference between them and display the result.
+
+# Todo
+# Save Utskrif når ting lukkes (Localstorage)
+# legg til kopier utskrift av "timer"
+# bytte farger og Klokke icon.
+
+Laget mainly av Brage Brandsegg lein
+https://github.com/NotTidal/timecalc
