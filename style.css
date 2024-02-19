@@ -1,5 +1,5 @@
 button{
-    background-color: orange;
+    background-color: rgba(224, 1, 176, 0.665);
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -9,8 +9,8 @@ button{
 }
 
 #inputcontainer{
-    background-color: lightgray;
-    background-color: gray;
+    background-color: rgb(0, 145, 78);
+    background-color: rgb(8, 81, 95);
     margin-bottom: 10px;
     padding-top: 20px;
 
