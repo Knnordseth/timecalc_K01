@@ -9,7 +9,6 @@ button{
 }
 
 #inputcontainer{
-    background-color: rgb(0, 145, 78);
     background-color: rgb(8, 81, 95);
     margin-bottom: 10px;
     padding-top: 20px;
@@ -37,7 +36,7 @@ td{
 input{
     margin: 10px;
     padding: 8px;
-    background-color: rgb(212, 25, 84);
+    background-color: lightblue;
     border-radius: 5px;
 }
 
