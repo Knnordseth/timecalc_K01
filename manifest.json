@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
+    "name": "Time Calculator",
     "description": "Base Level Extension",
     "version": "3.0",
     "permissions":
@@ -8,6 +8,6 @@
     "action": {
       "default_popup": "index.html"},
     "icons": {
-    "128": "icon.jpg"
+    "128": "128.png"
     }
   }
