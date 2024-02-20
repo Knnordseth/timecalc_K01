@@ -41,7 +41,7 @@ function loadData() {
   loadData();
 
 
-calcBtn.onclick = () => {
+ function performCalculation() {
     const hourStart = parseInt(hourStartInp.value) || 0;
     const minStart = parseInt(minStartInp.value) || 0;
     const secStart = parseInt(secStartInp.value) || 0;
@@ -76,3 +76,11 @@ calcBtn.onclick = () => {
 // Save the data after calculation
 saveData();
 };
+
+calcBtn.onclick = performCalculation;
+
+[hourStartInp, minStartInp, secStartInp, hourEndInp, minEndInp, secEndInp].forEach(input => {
+    input.addEventListener('keypress', (event) => {
+      if (event.key === "Enter" || event.keyCode === 13) {
+        performCalculation();
+      }})})
